@@ -1,0 +1,502 @@
+/* Reset CSS - Overrides default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oswald", serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Container */
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.section-padding {
+    padding: 90px 0;
+}
+
+/* Header */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.214);
+}
+
+header .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    text-transform: uppercase;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+header nav ul li a:hover {
+    color: #C22F4F;
+    transition: 0.5s;
+}
+
+header nav ul .active a {
+    color: #C22F4F;
+}
+
+header .header-content .header-content-logo {
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: lowercase;
+}
+
+
+/* Hero Banner */
+.background-img {
+    background-image: url(../Img/home_slider.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-banner {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    background-position: center;
+}
+
+.hero-banner .sub-title {
+    font-size: 25px;
+}
+
+.hero-banner h1 {
+    font-size: 75px;
+    line-height: 83px;
+    margin-bottom: 20px;
+}
+
+.hero-banner button {
+    background-color: #D43F4F;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.hero-banner button a {
+    text-decoration: none;
+    color: white;
+    font-weight: 350;
+}
+
+.hero-banner button:hover {
+    background-color: #C22F4F;
+    transition: 0.5s;
+}
+
+.hero-banner i {
+    margin-top: 80px;
+    font-size: 30px;
+    animation-name: arrowGoDown;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+
+/* Service Section */
+.service {
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.service .service-title .sub-title {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #e62b4a;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.service .service-title h2 {
+    font-size: 50px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.service .service-title p {
+    font-size: 16px;
+    font-weight: 700;
+    color: #888888;
+}
+
+.service .service-content .your-class {
+    margin-top: 30px;
+}
+
+.service .service-content .content-item {
+    background-color: white;
+    color: black;
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.service .service-content .content-item::after {
+    content: "";
+    height: 0;
+    width: 5px;
+    background: #e62b4a;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: .2s linear;
+}
+
+.service .service-content .content-item:hover::after {
+    height: 100%;
+}
+
+.service .service-content .content-item p {
+    color: #888888;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.service .service-content .content-item i {
+    font-size: 50px;
+}
+
+.service .service-content .content-item-wrapper {
+    padding: 0 10px;
+}
+
+.service .slick-dots li button:before {
+    margin-top: 20px;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.service .slick-dots .slick-active button:before {
+    color: #e62b4a;
+}
+
+
+/* Blog Section */
+.blog .blog-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.blog .blog-header .sub-title {
+    color: #888888;
+    font-size: 14px;
+}
+
+.blog .blog-header h2 {
+    font-size: 50px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.blog .blog-header p {
+    font-size: 16px;
+    font-weight: 700;
+    color: #888888;
+}
+
+.blog .blog-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.blog .blog-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(50%) contrast(50%);
+}
+
+.blog .blog-content .blog-content-item {
+    position: relative;
+}
+
+.blog .blog-content-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(230, 43, 74, 0.6);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+    transition: .6s;
+}
+
+
+.blog .blog-content .blog-content-item .overlay .overlay-icon {
+    text-align: right;
+    color: white;
+    transform: translateY(100px);
+    transition: .6s;
+}
+
+.blog .blog-content .blog-content-item .overlay .overlay-text {
+    transform: translateY(100px);
+    color: white;
+    transition: .6s;
+}
+
+.blog .blog-content .blog-content-item:hover .overlay {
+    opacity: 1;
+}
+
+.blog .blog-content .blog-content-item:hover .overlay-icon {
+    transform: translateY(0);
+}
+
+.blog .blog-content .blog-content-item:hover .overlay-text {
+    transform: translateY(0);
+}
+
+.blog .blog-content .blog-content-item:first-of-type {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+}
+
+.blog .blog-content .blog-content-item:last-of-type {
+    grid-column: 3 / span 2;
+    grid-row: 3 / span 2;
+}
+
+/* Number Section */
+.number {
+    background: black;
+    color: white;
+}
+
+.number .number-content {
+    display: flex;
+}
+
+.number .number-content .number-item {
+    flex: 1;
+    text-align: center;
+}
+
+.number .number-content .number-item p {
+    font-size: 20px;
+    color: #888888;
+}
+
+.number .number-content .number-item h2 {
+    font-size: 60px;
+    font-weight: 300;
+}
+
+
+/* Digital Section */
+.digital {
+    background-image: url(/Img/bussiness_img_1.jpg);
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.digital .digital-title h4 {
+    font-size: 14px;
+    color: #e62b4a;
+    font-weight: 300;
+}
+
+.digital .digital-title h1 {
+    font-size: 50px;
+    font-weight: 400;
+    color: white;
+}
+
+.digital .digital-title p {
+    font-size: 16px;
+    color: #888888;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.digital video {
+    width: 85%;
+}
+
+
+/* Contact Section */
+.contact {
+    background: white;
+    text-align: center;
+}
+
+.contact .contact-title h1 {
+    font-size: 50px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.contact .contact-title p {
+    color: #888888;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.contact .contact-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact .contact-content-left {
+    width: 60%;
+}
+
+.contact .contact-content-right {
+    width: 40%;
+    padding: 0 15px;
+}
+
+.contact .contact-content-right form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact .contact-content-right input {
+    font-size: 15px;
+    padding: 1em;
+    border: 1px solid #888888;
+    border-radius: 2px;
+    margin-bottom: 30px;
+}
+
+.contact .contact-content-right textarea {
+    font-size: 15px;
+    padding: 1em;
+    border: 1px solid #888888;
+    border-radius: 2px;
+    margin-bottom: 30px;
+    resize: none;
+}
+
+.ct-r-button {
+    padding: 20px 30px;
+    border: 1px solid black;
+    background-color: #000;
+    color: #ffffff;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.ct-r-button:hover {
+    background-color: #D43F50;
+}
+
+/* footer */
+
+footer {
+    background-color: #000;
+    color: #ffffff;
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.footer-content {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 0;
+}
+
+.footer-content p {
+    font-size: 14px
+}
+
+.footer-content a {
+    width: 54px;
+    height: 54px;
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 54px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 16px;
+    margin-left: 5px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: all .5s;
+}
+
+/* Back To Top Button */
+.back-to-top-button {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 4px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.25);
+    font-weight: bold;
+    color: #fff;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 20px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.cd-top--is-visible { 
+    visibility: visible;
+    opacity: 1;
+}
+  
+
+/* Keyframes */
+@keyframes arrowGoDown {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+}
