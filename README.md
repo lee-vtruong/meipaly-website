@@ -12,7 +12,6 @@ This project is a website for a fictional web design agency called "Meipaly". It
   - [Getting Started](#getting-started)
   - [Customization](#customization)
   - [Contributing](#contributing)
-  - [License](#license)
 
 ## Project Structure
 
