@@ -2,6 +2,9 @@
 
 This project is a website for a fictional web design agency called "Meipaly". It showcases the agency's services, blog posts, and contact information.
 
+## Domains deploy: 
+meipaly-website.vercel.app
+
 ## Table of Contents
 
 - [Meipaly - Smart Web Design Agency](#meipaly---smart-web-design-agency)
